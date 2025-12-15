@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Alexandre Tessaro - Desenvolvedor e Criador de Projetos">
+    <title>Alexandre Tessaro - Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#home" class="logo">AT</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link">Início</a></li>
+                    <li><a href="#about" class="nav-link">Sobre</a></li>
+                    <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                    <li><a href="#projects" class="nav-link">Projetos</a></li>
+                    <li><a href="#blog" class="nav-link">Blog</a></li>
+                    <li><a href="#certificates" class="nav-link">Certificados</a></li>
+                    <li><a href="#testimonials" class="nav-link">Depoimentos</a></li>
+                    <li><a href="#contact" class="nav-link">Contato</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="2"/>
+                        <path d="M10 2v2M10 16v2M18 10h-2M4 10H2M16.364 3.636l-1.414 1.414M5.05 14.95l-1.414 1.414M16.364 16.364l-1.414-1.414M5.05 5.05L3.636 3.636" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Canvas para partículas -->
+    <canvas id="particlesCanvas" class="particles-canvas"></canvas>
+
+    <!-- Seção Hero -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting">Olá, eu sou</span>
+                        <span class="name">Alexandre Tessaro</span>
+                    </h1>
+                    <p class="hero-subtitle">Desenvolvedor apaixonado por criar soluções inovadoras e experiências digitais incríveis</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+                        <a href="#contact" class="btn btn-secondary">Entre em Contato</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-placeholder">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="100" r="80" fill="currentColor" opacity="0.1"/>
+                            <circle cx="100" cy="80" r="30" fill="currentColor" opacity="0.3"/>
+                            <path d="M 60 140 Q 100 120 140 140" stroke="currentColor" stroke-width="3" fill="none" opacity="0.3"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Role para baixo</span>
+                <div class="scroll-arrow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Olá! Sou Alexandre Tessaro, um desenvolvedor apaixonado por tecnologia e criação de soluções digitais. 
+                        Minha jornada na programação começou com curiosidade e desde então não parei de aprender e evoluir.
+                    </p>
+                    <p>
+                        Acredito que a tecnologia tem o poder de transformar ideias em realidade e melhorar a vida das pessoas. 
+                        Por isso, me dedico a criar projetos que sejam não apenas funcionais, mas também intuitivos e acessíveis.
+                    </p>
+                    <p>
+                        Quando não estou codando, gosto de explorar novas tecnologias, contribuir para projetos open source 
+                        e compartilhar conhecimento com a comunidade de desenvolvedores.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Projetos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Anos de Experiência</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Dedicação</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Habilidades -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Habilidades & Tecnologias</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">TypeScript</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Ferramentas</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Linux</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projetos em Destaque</h2>
+            <div class="projects-tabs">
+                <button class="tab-btn active" data-tab="featured">Destaques</button>
+                <button class="tab-btn" data-tab="github">GitHub</button>
+            </div>
+            <div class="projects-grid" id="featuredProjects">
+                <!-- Projeto 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%236366f1' opacity='0.1'/%3E%3Ccircle cx='200' cy='125' r='50' fill='%236366f1' opacity='0.2'/%3E%3C/svg%3E" 
+                             alt="Projeto E-commerce" 
+                             loading="lazy" 
+                             class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Projeto E-commerce</h3>
+                        <p class="project-description">
+                            Plataforma completa de e-commerce com carrinho de compras, sistema de pagamento 
+                            e painel administrativo. Desenvolvido com React e Node.js.
+                        </p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <span>Ver Projeto</span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M4.167 15.833L15.833 4.167M15.833 4.167H6.667M15.833 4.167V13.333" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <span>GitHub</span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M7.5 15.833C6.25 16.5 6.25 16.5 5 15.833M12.5 15.833C13.75 16.5 13.75 16.5 15 15.833M12.5 15.833V13.125C12.5 12.375 12.375 11.958 12.125 11.625C13.583 11.458 15 10.833 15 8.75C15 7.708 14.625 6.875 14.042 6.25C14.167 5.875 14.167 5.333 13.958 4.583C13.958 4.583 13.375 4.375 12.5 5.417C11.75 5.208 10.875 5.208 10.125 5.417C9.25 4.375 8.667 4.583 8.667 4.583C8.458 5.333 8.458 5.875 8.583 6.25C8 6.875 7.625 7.708 7.625 8.75C7.625 10.833 9.042 11.458 10.5 11.625C10.292 11.875 10.208 12.25 10.208 12.75V15.833M7.5 15.833V13.125C7.5 12.375 7.375 11.958 7.125 11.625C5.667 11.458 4.25 10.833 4.25 8.75C4.25 7.708 4.625 6.875 5.208 6.25C5.083 5.875 5.083 5.333 5.292 4.583C5.292 4.583 5.875 4.375 6.75 5.417C7.5 5.208 8.375 5.208 9.125 5.417C10 4.375 10.583 4.583 10.583 4.583C10.792 5.333 10.792 5.875 10.667 6.25C11.25 6.875 11.625 7.708 11.625 8.75C11.625 10.833 10.208 11.458 8.75 11.625C8.958 11.875 9.042 12.25 9.042 12.75V15.833" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%236366f1' opacity='0.1'/%3E%3Crect x='100' y='75' width='200' height='100' fill='%236366f1' opacity='0.2'/%3E%3C/svg%3E" 
+                             alt="App de Gerenciamento" 
+                             loading="lazy" 
+                             class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">App de Gerenciamento</h3>
+                        <p class="project-description">
+                            Aplicação web para gerenciamento de tarefas e projetos com interface intuitiva. 
+                            Inclui autenticação, dashboard e relatórios em tempo real.
+                        </p>
+                        <div class="project-tags">
+                            <span>Vue.js</span>
+                            <span>Express</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <span>Ver Projeto</span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M4.167 15.833L15.833 4.167M15.833 4.167H6.667M15.833 4.167V13.333" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <span>GitHub</span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M7.5 15.833C6.25 16.5 6.25 16.5 5 15.833M12.5 15.833C13.75 16.5 13.75 16.5 15 15.833M12.5 15.833V13.125C12.5 12.375 12.375 11.958 12.125 11.625C13.583 11.458 15 10.833 15 8.75C15 7.708 14.625 6.875 14.042 6.25C14.167 5.875 14.167 5.333 13.958 4.583C13.958 4.583 13.375 4.375 12.5 5.417C11.75 5.208 10.875 5.208 10.125 5.417C9.25 4.375 8.667 4.583 8.667 4.583C8.458 5.333 8.458 5.875 8.583 6.25C8 6.875 7.625 7.708 7.625 8.75C7.625 10.833 9.042 11.458 10.5 11.625C10.292 11.875 10.208 12.25 10.208 12.75V15.833M7.5 15.833V13.125C7.5 12.375 7.375 11.958 7.125 11.625C5.667 11.458 4.25 10.833 4.25 8.75C4.25 7.708 4.625 6.875 5.208 6.25C5.083 5.875 5.083 5.333 5.292 4.583C5.292 4.583 5.875 4.375 6.75 5.417C7.5 5.208 8.375 5.208 9.125 5.417C10 4.375 10.583 4.583 10.583 4.583C10.792 5.333 10.792 5.875 10.667 6.25C11.25 6.875 11.625 7.708 11.625 8.75C11.625 10.833 10.208 11.458 8.75 11.625C8.958 11.875 9.042 12.25 9.042 12.75V15.833" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%236366f1' opacity='0.1'/%3E%3Cpolygon points='200,50 300,150 200,200 100,150' fill='%236366f1' opacity='0.2'/%3E%3C/svg%3E" 
+                             alt="Dashboard Analytics" 
+                             loading="lazy" 
+                             class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Dashboard Analytics</h3>
+                        <p class="project-description">
+                            Dashboard interativo para visualização de dados e métricas. 
+                            Desenvolvido com gráficos em tempo real e filtros avançados.
+                        </p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>D3.js</span>
+                            <span>Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <span>Ver Projeto</span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M4.167 15.833L15.833 4.167M15.833 4.167H6.667M15.833 4.167V13.333" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <span>GitHub</span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M7.5 15.833C6.25 16.5 6.25 16.5 5 15.833M12.5 15.833C13.75 16.5 13.75 16.5 15 15.833M12.5 15.833V13.125C12.5 12.375 12.375 11.958 12.125 11.625C13.583 11.458 15 10.833 15 8.75C15 7.708 14.625 6.875 14.042 6.25C14.167 5.875 14.167 5.333 13.958 4.583C13.958 4.583 13.375 4.375 12.5 5.417C11.75 5.208 10.875 5.208 10.125 5.417C9.25 4.375 8.667 4.583 8.667 4.583C8.458 5.333 8.458 5.875 8.583 6.25C8 6.875 7.625 7.708 7.625 8.75C7.625 10.833 9.042 11.458 10.5 11.625C10.292 11.875 10.208 12.25 10.208 12.75V15.833M7.5 15.833V13.125C7.5 12.375 7.375 11.958 7.125 11.625C5.667 11.458 4.25 10.833 4.25 8.75C4.25 7.708 4.625 6.875 5.208 6.25C5.083 5.875 5.083 5.333 5.292 4.583C5.292 4.583 5.875 4.375 6.75 5.417C7.5 5.208 8.375 5.208 9.125 5.417C10 4.375 10.583 4.583 10.583 4.583C10.792 5.333 10.792 5.875 10.667 6.25C11.25 6.875 11.625 7.708 11.625 8.75C11.625 10.833 10.208 11.458 8.75 11.625C8.958 11.875 9.042 12.25 9.042 12.75V15.833" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-grid hidden" id="githubProjects">
+                <div class="loading-spinner">
+                    <div class="spinner"></div>
+                    <p>Carregando projetos do GitHub...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Blog -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="section-title">Blog & Artigos</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-placeholder">
+                            <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="250" fill="currentColor" opacity="0.1"/>
+                                <rect x="50" y="50" width="300" height="20" fill="currentColor" opacity="0.2"/>
+                                <rect x="50" y="90" width="250" height="20" fill="currentColor" opacity="0.2"/>
+                                <rect x="50" y="130" width="200" height="20" fill="currentColor" opacity="0.2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">15 Jan 2024</span>
+                        <h3 class="blog-title">Como Otimizar Performance em React</h3>
+                        <p class="blog-excerpt">
+                            Dicas práticas e técnicas avançadas para melhorar a performance de aplicações React, 
+                            incluindo memoização, code splitting e lazy loading.
+                        </p>
+                        <a href="#" class="blog-link">Ler mais →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-placeholder">
+                            <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="250" fill="currentColor" opacity="0.1"/>
+                                <circle cx="200" cy="125" r="60" fill="currentColor" opacity="0.2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">10 Jan 2024</span>
+                        <h3 class="blog-title">Introdução ao TypeScript</h3>
+                        <p class="blog-excerpt">
+                            Um guia completo para começar com TypeScript, explorando tipos, interfaces, 
+                            generics e como migrar projetos JavaScript existentes.
+                        </p>
+                        <a href="#" class="blog-link">Ler mais →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-placeholder">
+                            <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="250" fill="currentColor" opacity="0.1"/>
+                                <polygon points="200,50 350,200 200,200 50,200" fill="currentColor" opacity="0.2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">5 Jan 2024</span>
+                        <h3 class="blog-title">Melhores Práticas de CSS Moderno</h3>
+                        <p class="blog-excerpt">
+                            Explorando CSS Grid, Flexbox, Custom Properties e outras técnicas modernas 
+                            para criar layouts responsivos e manteráveis.
+                        </p>
+                        <a href="#" class="blog-link">Ler mais →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Certificados -->
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <h2 class="section-title">Certificados & Conquistas</h2>
+            <div class="certificates-grid">
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="certificate-title">React Advanced Patterns</h3>
+                    <p class="certificate-issuer">Pluralsight</p>
+                    <span class="certificate-date">Dez 2023</span>
+                    <a href="#" class="certificate-link" target="_blank" rel="noopener noreferrer">Ver Certificado →</a>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="certificate-title">AWS Certified Developer</h3>
+                    <p class="certificate-issuer">Amazon Web Services</p>
+                    <span class="certificate-date">Nov 2023</span>
+                    <a href="#" class="certificate-link" target="_blank" rel="noopener noreferrer">Ver Certificado →</a>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="certificate-title">Node.js Advanced Concepts</h3>
+                    <p class="certificate-issuer">Udemy</p>
+                    <span class="certificate-date">Out 2023</span>
+                    <a href="#" class="certificate-link" target="_blank" rel="noopener noreferrer">Ver Certificado →</a>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="certificate-title">JavaScript Algorithms</h3>
+                    <p class="certificate-issuer">freeCodeCamp</p>
+                    <span class="certificate-date">Set 2023</span>
+                    <a href="#" class="certificate-link" target="_blank" rel="noopener noreferrer">Ver Certificado →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Depoimentos -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Depoimentos</h2>
+            <div class="testimonials-slider">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <svg class="quote-icon" width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" fill="currentColor" opacity="0.2"/>
+                                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" fill="currentColor" opacity="0.2"/>
+                            </svg>
+                            <p class="testimonial-text">
+                                "Trabalhar com Alexandre foi uma experiência incrível. Sua atenção aos detalhes 
+                                e conhecimento técnico resultaram em um produto excepcional que superou nossas expectativas."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="50" cy="50" r="40" fill="currentColor" opacity="0.2"/>
+                                        <circle cx="50" cy="40" r="15" fill="currentColor" opacity="0.3"/>
+                                        <path d="M 30 80 Q 50 65 70 80" stroke="currentColor" stroke-width="3" fill="none" opacity="0.3"/>
+                                    </svg>
+                                </div>
+                                <div class="author-info">
+                                    <h4 class="author-name">João Silva</h4>
+                                    <p class="author-role">CEO, Tech Solutions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <svg class="quote-icon" width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" fill="currentColor" opacity="0.2"/>
+                                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" fill="currentColor" opacity="0.2"/>
+                            </svg>
+                            <p class="testimonial-text">
+                                "Profissional extremamente competente e dedicado. Alexandre entregou o projeto 
+                                no prazo, com qualidade superior e sempre disponível para ajustes e melhorias."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="50" cy="50" r="40" fill="currentColor" opacity="0.2"/>
+                                        <circle cx="50" cy="40" r="15" fill="currentColor" opacity="0.3"/>
+                                        <path d="M 30 80 Q 50 65 70 80" stroke="currentColor" stroke-width="3" fill="none" opacity="0.3"/>
+                                    </svg>
+                                </div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Maria Santos</h4>
+                                    <p class="author-role">Product Manager, StartupXYZ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <svg class="quote-icon" width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" fill="currentColor" opacity="0.2"/>
+                                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" fill="currentColor" opacity="0.2"/>
+                            </svg>
+                            <p class="testimonial-text">
+                                "Recomendo fortemente! Alexandre tem um conhecimento profundo de tecnologias modernas 
+                                e consegue traduzir requisitos complexos em soluções elegantes e eficientes."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="50" cy="50" r="40" fill="currentColor" opacity="0.2"/>
+                                        <circle cx="50" cy="40" r="15" fill="currentColor" opacity="0.3"/>
+                                        <path d="M 30 80 Q 50 65 70 80" stroke="currentColor" stroke-width="3" fill="none" opacity="0.3"/>
+                                    </svg>
+                                </div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Pedro Costa</h4>
+                                    <p class="author-role">CTO, Innovation Labs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonials-nav">
+                    <button class="testimonial-btn prev" id="testimonialPrev" aria-label="Previous testimonial">‹</button>
+                    <div class="testimonial-dots" id="testimonialDots"></div>
+                    <button class="testimonial-btn next" id="testimonialNext" aria-label="Next testimonial">›</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-description">
+                        Estou sempre aberto a novas oportunidades e projetos interessantes. 
+                        Se você tem uma ideia ou quer colaborar, entre em contato!
+                    </p>
+                    <div class="contact-methods">
+                        <a href="mailto:seuemail@exemplo.com" class="contact-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/>
+                                <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <span>seuemail@exemplo.com</span>
+                        </a>
+                        <a href="https://linkedin.com/in/seu-perfil" class="contact-item" target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="2"/>
+                                <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/seu-usuario" class="contact-item" target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Alexandre Tessaro. Todos os direitos reservados.</p>
+            <p class="footer-note">Feito com ❤️ e muito café</p>
+        </div>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
